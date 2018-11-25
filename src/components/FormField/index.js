@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class FormField extends Component {
-
   render() {
     if (this.props.past) {
       return (
