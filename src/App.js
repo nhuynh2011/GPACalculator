@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import FormField from './components/FormField'
 import './App.css';
 
+// Support calculating current GPA along with cumalative
+
 class App extends Component {
+  togglePast() {
+    var past = document.getElementById('past');
+    var checkbox = document.getElementById('checkbox');
+    console.log(checkbox.checked);
+    //element.checked ? element.display="none" : element.display="inherit";
+    if (checkbox.checked == true) past.style.display="inherit";
+    else past.style.display="none";
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <form id="form" name="form">
+          <label onClick={ () => this.togglePast() }>
+            <input type="checkbox" id="checkbox" /> Calculate Cumaltive GPA? <br />
+          </label>
+          <FormField past />
+          <FormField />
+          <FormField />
+          <FormField />
+          <FormField />
+          <FormField />
+          <button type="button">Calculate GPA</button>
+        </form>
       </div>
     );
   }
