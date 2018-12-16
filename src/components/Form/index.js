@@ -55,13 +55,18 @@ class Form extends Component {
           <label onChange={ () => this.togglePast() }>
             <input type="checkbox" id="checkbox" /> Calculate Cumulative GPA? <br />
           </label>
-          <FormField past />
-          {
-            this.state.fields.map((obj) => {
-              return (
-              <FormField key={ obj.id } />
-            )})
-          }
+          <table>
+            <tr>
+
+            </tr>
+            <FormField past />
+            {
+              this.state.fields.map((obj) => {
+                return (
+                <FormField key={ obj.id } />
+              )})
+            }
+          </table>
         </form>
         <button onClick={ () => this.addAnotherClass() } type="button">Add another class</button>
         <button onClick={ () => this.removeClass() } type="button">Remove a class</button>
