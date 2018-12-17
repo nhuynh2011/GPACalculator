@@ -14,7 +14,6 @@ class App extends Component {
     return (
       <div>
         <Form />
-        <button type="button">Calculate GPA</button>
       </div>
     )
   }

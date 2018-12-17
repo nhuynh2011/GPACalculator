@@ -5,15 +5,16 @@ class FormField extends Component {
     if (this.props.past) {
       return (
         <div id="past" style={{ display:'none' }}>
-          <input placeholder="Past Credits" type="text"/>
-          <input placeholder="Past GPA" type="text"/>
+          <input placeholder="Past Credits" id="past-credits" type="text"/>
+          <input placeholder="Past GPA" id="past-gpa" type="text"/>
         </div>
       )
     } else return (
       <div>
         <input placeholder="Class Name" type="text"/>
-        <input placeholder="Credits" type="text" id="credits"/>
-        <select name="grade" id="grade">
+        <input placeholder="Credits" type="text" name="credits"/>
+        <select name="grade" name="grades">
+          <option value="select">Select</option>
           <option value="A">A</option>
           <option value="A-">A-</option>
           <option value="B+">B+</option>
